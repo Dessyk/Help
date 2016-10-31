@@ -3,6 +3,7 @@ git add . или git add --all - Добавить все файлы (Модифицированные и новые) в st
 
 git checkout -b Test - Создает ветку и переключается на нее
 git checkout -- Demo - Удаляет все изменения до последнего коммита в файле Demo
+git checkout .  - Revert changes made to your working copy
 git reset HEAD Demo - Удаляет файл Demo из Stage состояния
 
 git clean -f - Remove untracked files
@@ -50,6 +51,10 @@ git rebase master - Выполняем Rebase из ветки master
 Вначале поставятся коммиты из мастер после этого по одному применятся коммиты из branchName
 
 git rebase -i HEAD~3 - Выполняет интерактивный rebase (можно поменять порядок выполнения rebase, поменять сообщение в коммите)
+
+Merge
+git merge branchName - Выполяет мерж из ветки "branchName" в текущую ветку
+
 
 git log --oneline --graph - Выводит визуальное представление веток
 git log --pretty=oneline - Выводит историю коммитов, один коммит на строку
